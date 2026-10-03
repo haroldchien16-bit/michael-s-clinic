@@ -12,10 +12,16 @@ html {
 
 body {
     margin: 0;
+    min-height: 100vh;
+
     background: #ffffff;
     color: #222222;
+
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -24,7 +30,9 @@ body {
 ================================= */
 
 .site-header {
-    height: 55px;
+    width: 100%;
+    min-height: 68px;
+
     background: #111c17;
     color: white;
 
@@ -32,26 +40,27 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 27px;
+    padding: 0 32px;
 
     border-bottom: 1px solid #d6d6d6;
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 23px;
     font-weight: bold;
 }
 
 .navigation {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 30px;
 }
 
 .navigation a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
+
+    font-size: 16px;
 }
 
 .navigation a:hover {
@@ -60,15 +69,18 @@ body {
 
 
 /* ==============================
-   MAIN CONTAINER
+   MAIN CONTENT
 ================================= */
 
 .container {
     width: 100%;
-    max-width: 817px;
+    max-width: 1400px;
+
     margin: 0 auto;
 
-    padding: 15px 27px 25px;
+    padding: 24px 40px 40px;
+
+    flex: 1;
 }
 
 
@@ -77,15 +89,16 @@ body {
 ================================= */
 
 h2 {
-    margin: 0 0 17px;
+    margin: 0 0 20px;
 
-    font-size: 21px;
+    font-size: 25px;
     line-height: 1.2;
+
     font-weight: 700;
 }
 
 section {
-    margin-bottom: 14px;
+    margin-bottom: 24px;
 }
 
 
@@ -94,49 +107,54 @@ section {
 ================================= */
 
 .services-grid {
+    width: 100%;
+
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 18px;
+    gap: 24px;
 
-    margin-bottom: 17px;
+    margin-bottom: 28px;
 }
 
 .service-card {
-    min-height: 166px;
+    min-height: 185px;
 
     background: #f5f9f5;
 
-    border-left: 4px solid #218965;
+    border-left: 5px solid #218965;
 
-    padding: 17px 13px 14px;
+    padding: 18px 18px 20px;
 
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
 }
 
 .service-icon {
-    width: 57px;
-    height: 57px;
+    width: 62px;
+    height: 62px;
 
     background: #e7f4ed;
 
-    border-radius: 5px;
+    border-radius: 6px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 21px;
+    margin-bottom: 22px;
 }
 
 .service-icon svg {
-    width: 40px;
-    height: 40px;
+    width: 43px;
+    height: 43px;
 
     fill: none;
+
     stroke: #111c17;
+
     stroke-width: 4;
+
     stroke-linecap: round;
     stroke-linejoin: round;
 }
@@ -148,14 +166,17 @@ section {
 
 .service-card:nth-child(3) .service-icon polyline {
     fill: none;
+
     stroke: white;
+
     stroke-width: 4;
 }
 
 .service-card h3 {
-    margin: 0 0 13px;
+    margin: 0 0 12px;
 
-    font-size: 16px;
+    font-size: 18px;
+
     line-height: 1.2;
 }
 
@@ -164,7 +185,8 @@ section {
 
     color: #238965;
 
-    font-size: 14px;
+    font-size: 16px;
+
     font-weight: bold;
 }
 
@@ -174,16 +196,17 @@ section {
 ================================= */
 
 #hours {
-    margin-top: 4px;
-    margin-bottom: 16px;
+    margin-top: 5px;
+
+    margin-bottom: 25px;
 }
 
 .hours-table {
-    width: 290px;
+    width: 380px;
 
     border-collapse: collapse;
 
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .hours-table th {
@@ -196,14 +219,14 @@ section {
 
 .hours-table th,
 .hours-table td {
-    padding: 6px 12px;
+    padding: 9px 13px;
 
     border: 1px solid #d2d2d2;
 }
 
 .hours-table td:first-child,
 .hours-table th:first-child {
-    width: 135px;
+    width: 175px;
 }
 
 
@@ -213,26 +236,30 @@ section {
 
 .booking-section {
     margin-top: 5px;
+
+    margin-bottom: 30px;
 }
 
 .required-note {
-    margin: -1px 0 11px;
+    margin: -2px 0 14px;
 
-    font-size: 13px;
+    font-size: 15px;
+
     color: #444444;
 }
 
 .form-row {
     display: flex;
+
     align-items: center;
 
-    margin-bottom: 11px;
+    margin-bottom: 14px;
 }
 
 .form-row label {
-    width: 72px;
+    width: 100px;
 
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .form-row label span {
@@ -240,22 +267,23 @@ section {
 }
 
 .form-row input {
-    height: 20px;
+    height: 32px;
 
     border: 1px solid #999999;
 
-    padding: 2px 5px;
+    padding: 4px 7px;
 
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+
+    font-size: 15px;
 }
 
 #name {
-    width: 157px;
+    width: 240px;
 }
 
 #email {
-    width: 157px;
+    width: 240px;
 }
 
 
@@ -264,35 +292,37 @@ section {
 ================================= */
 
 fieldset {
-    width: 355px;
+    width: 420px;
 
-    margin: 2px 0 14px;
+    margin: 5px 0 17px;
 
-    padding: 7px 10px 9px;
+    padding: 10px 13px 12px;
 
     border: 1px solid #d3d3d3;
-    border-radius: 6px;
+
+    border-radius: 7px;
 }
 
 legend {
-    padding: 0 3px;
+    padding: 0 4px;
 
     color: #218965;
 
-    font-size: 13px;
+    font-size: 15px;
+
     font-weight: bold;
 }
 
 .radio-option {
-    margin-right: 5px;
+    margin-right: 10px;
 
     color: #444444;
 
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .radio-option input {
-    margin: 0 4px 0 0;
+    margin: 0 5px 0 0;
 
     vertical-align: middle;
 }
@@ -304,15 +334,18 @@ legend {
 
 button {
     border: none;
-    border-radius: 4px;
+
+    border-radius: 5px;
 
     background: #218965;
+
     color: white;
 
-    padding: 9px 16px;
+    padding: 11px 19px;
 
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+
+    font-size: 14px;
 
     cursor: pointer;
 }
@@ -331,38 +364,101 @@ button:active {
 ================================= */
 
 .site-footer {
-    min-height: 46px;
+    width: 100%;
+
+    min-height: 55px;
 
     background: #111c17;
+
     color: white;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    padding: 10px 20px;
+    padding: 12px 20px;
 
-    font-size: 13px;
+    font-size: 14px;
 
     border-top: 1px solid #d6d6d6;
 }
 
 
 /* ==============================
-   RESPONSIVE DESIGN
+   LARGE SCREENS
 ================================= */
 
-@media (max-width: 700px) {
+@media (min-width: 1500px) {
+
+    .container {
+        max-width: 1500px;
+
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .services-grid {
+        gap: 28px;
+    }
+
+    .service-card {
+        min-height: 200px;
+
+        padding: 22px;
+    }
+
+    .service-card h3 {
+        font-size: 19px;
+    }
+
+    .price {
+        font-size: 17px;
+    }
+}
+
+
+/* ==============================
+   TABLETS
+================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        padding: 22px 25px 35px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navigation {
+        gap: 20px;
+    }
+}
+
+
+/* ==============================
+   MOBILE
+================================= */
+
+@media (max-width: 650px) {
 
     .site-header {
-        height: auto;
+        min-height: auto;
 
-        padding: 15px 20px;
+        padding: 16px 20px;
 
         flex-direction: column;
+
         align-items: flex-start;
 
-        gap: 12px;
+        gap: 14px;
+    }
+
+    .logo {
+        font-size: 21px;
     }
 
     .navigation {
@@ -373,29 +469,64 @@ button:active {
         flex-wrap: wrap;
     }
 
+    .navigation a {
+        font-size: 14px;
+    }
+
     .container {
-        padding: 20px;
+        padding: 20px 18px 30px;
+    }
+
+    h2 {
+        font-size: 22px;
     }
 
     .services-grid {
         grid-template-columns: 1fr;
+
+        gap: 18px;
     }
 
     .service-card {
-        min-height: auto;
+        min-height: 175px;
     }
 
     .hours-table {
         width: 100%;
-        max-width: 350px;
+
+        max-width: 400px;
     }
 
     fieldset {
         width: 100%;
-        max-width: 355px;
+
+        max-width: 420px;
+    }
+
+    .form-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .form-row label {
+        width: auto;
+    }
+
+    #name,
+    #email {
+        width: 100%;
+
+        max-width: 300px;
     }
 }
 
+
+/* ==============================
+   SMALL PHONES
+================================= */
 
 @media (max-width: 400px) {
 
@@ -407,14 +538,16 @@ button:active {
         font-size: 13px;
     }
 
-    .form-row {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 4px;
+    .service-card {
+        padding: 16px;
     }
 
-    .form-row label {
-        width: auto;
+    .hours-table {
+        font-size: 13px;
     }
 
+    .hours-table th,
+    .hours-table td {
+        padding: 8px;
+    }
 }
